@@ -141,7 +141,7 @@ class _ContactFormState extends State<ContactForm> {
         emailSent = true;
       });
     } catch (error) {
-      print(error);
+      print("ERROR:::${error}");
       setState(() {
         emailSent = true;
       });
