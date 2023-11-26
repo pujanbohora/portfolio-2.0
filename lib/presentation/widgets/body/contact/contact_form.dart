@@ -63,9 +63,21 @@ class _ContactFormState extends State<ContactForm> {
             ),
             const SizedBox(height: 12),
             TextFormField(
+              // controller: _subjectController,
+              initialValue: "bohorapawan@gmail.com",
+              style: AppStyles.s14,
+              decoration: const InputDecoration(labelText: 'Email To'),
+            ),
+            const SizedBox(height: 12),
+            TextFormField(
               validator: (value) {
+                final bool emailValid = RegExp(
+                    r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                    .hasMatch(value.toString());
                 if (value!.isEmpty) {
                   return 'Please enter your E-mail';
+                } else if (!emailValid) {
+                  return 'Please enter valid E-mail';
                 }
                 return null;
               },

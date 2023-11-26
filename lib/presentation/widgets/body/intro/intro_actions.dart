@@ -88,18 +88,18 @@ class IntoActions extends StatelessWidget {
         },
         width: 160,
       ),
-      context.width < DeviceType.ipad.getMaxWidth()
-          ? const SizedBox(height: 6)
-          : const SizedBox(width: 32),
-      CustomButton(
-        label: AppBarHeaders.projects.getString(),
-        icon: Icons.remove_red_eye,
-        borderColor: AppColors.primaryColor,
-        onPressed: () {
-          context.read<HomeBloc>().add(ChangeAppBarHeadersIndex(2));
-        },
-        width: 160,
-      ),
+      // context.width < DeviceType.ipad.getMaxWidth()
+      //     ? const SizedBox(height: 6)
+      //     : const SizedBox(width: 32),
+      // CustomButton(
+      //   label: AppBarHeaders.projects.getString(),
+      //   icon: Icons.remove_red_eye,
+      //   borderColor: AppColors.primaryColor,
+      //   onPressed: () {
+      //     context.read<HomeBloc>().add(ChangeAppBarHeadersIndex(2));
+      //   },
+      //   width: 160,
+      // ),
     ];
     return context.width < DeviceType.ipad.getMaxWidth()
         ? Column(

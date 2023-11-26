@@ -41,7 +41,7 @@ class CustomButton extends StatelessWidget {
             Flexible(
               child: AutoSizeText(
                 label,
-                style: AppStyles.s16,
+                style: AppStyles.s18,
                 textAlign: TextAlign.center,
                 minFontSize: 8,
                 maxLines: 1,
@@ -51,7 +51,7 @@ class CustomButton extends StatelessWidget {
               const SizedBox(width: 5),
               Icon(
                 icon,
-                size: 18,
+                size: 20,
                 color: AppColors.white,
               ),
             ]

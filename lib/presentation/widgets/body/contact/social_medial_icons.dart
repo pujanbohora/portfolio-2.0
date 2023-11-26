@@ -10,24 +10,24 @@ class SocialMediaIcons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Wrap(
+    return const Wrap(
       children: [
         SocialMediaIconBtn(
           icon: FontAwesomeIcons.facebook,
           link: SocialLinks.facebook,
         ),
         SocialMediaIconBtn(
-          icon: FontAwesomeIcons.instagram,
-          link: SocialLinks.instagram,
+          icon: FontAwesomeIcons.mailchimp,
+          link: "gmail",
         ),
         SocialMediaIconBtn(
           icon: FontAwesomeIcons.linkedinIn,
           link: SocialLinks.linkedin,
         ),
-        SocialMediaIconBtn(
-          icon: FontAwesomeIcons.twitter,
-          link: SocialLinks.twitter,
-        ),
+        // SocialMediaIconBtn(
+        //   icon: FontAwesomeIcons.twitter,
+        //   link: SocialLinks.twitter,
+        // ),
       ],
     );
   }
@@ -46,7 +46,11 @@ class SocialMediaIconBtn extends StatelessWidget {
         padding: const EdgeInsets.all(15),
       ),
       onPressed: () {
-        html.window.open(link!, '_blank');
+        if (link == "gmail") {
+
+        } else {
+          html.window.open(link!, '_blank');
+        }
       },
       child: Icon(
         icon,

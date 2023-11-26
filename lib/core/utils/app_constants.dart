@@ -31,7 +31,7 @@ abstract class AppConstants {
           'https://play-lh.googleusercontent.com/55zbOUfDqSrIrn1i_8UG3mW0Nt-n6KuibC9_peSt9E08SbmhgZpQirw9OPGEjcmza3dG=w240-h480-rw',
       description:
           'The story" is a location-based social media platform that allows users to share photos and videos with others in their immediate vicinity. ',
-      githubRepoLink: '',
+      // githubRepoLink: '',
       googlePlay:
           'https://play.google.com/store/apps/details?id=com.story.social.np',
     ),
