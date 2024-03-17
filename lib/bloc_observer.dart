@@ -5,7 +5,7 @@ class MyBlocObserver extends BlocObserver {
   @override
   void onCreate(BlocBase bloc) {
     super.onCreate(bloc);
-    debugPrint('onCreate -- ${bloc.runtimeType}');
+    // debugPrint('onCreate -- ${bloc.runtimeType}');
   }
 
   @override
