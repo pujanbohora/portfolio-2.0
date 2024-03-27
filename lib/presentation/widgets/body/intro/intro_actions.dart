@@ -27,7 +27,7 @@ class IntoActions extends StatelessWidget {
 
   Future<void> _downloadAssetPdf(BuildContext context) async {
     // Load asset PDF content using ByteData
-    final ByteData data = await rootBundle.load("/images/pujan_cv.pdf");
+    final ByteData data = await rootBundle.load("/images/PujanBohora_cv.pdf");
     final Uint8List assetPdfBytes = data.buffer.asUint8List();
 
     // Save the asset PDF to a file
@@ -36,7 +36,7 @@ class IntoActions extends StatelessWidget {
 
     // Create a download link
     html.AnchorElement(href: url)
-      ..download = "pujan_cv.pdf"
+      ..download = "PujanBohora_cv.pdf"
       ..click();
 
     // Revoke the object URL after the link is clicked
