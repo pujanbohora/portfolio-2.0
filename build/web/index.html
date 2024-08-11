@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="A new Flutter project.">
+    <!-- iOS meta tags & icons -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="testing_app">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <title>testing_app</title>
+    <link rel="manifest" href="manifest.json">
+    <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "3094172977";
+  </script>
+    <!-- This script adds the flutter initialization JS code -->
+    <script src="flutter.js" defer></script>
+
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBgQlirjyC_C2LjK4MrdsKBjKJK5zClV9s",
+        authDomain: "portfolio-90efd.firebaseapp.com",
+        projectId: "portfolio-90efd",
+        storageBucket: "portfolio-90efd.appspot.com",
+        messagingSenderId: "377743524060",
+        appId: "1:377743524060:web:be1e6dea82384f25c33419",
+        measurementId: "G-C44W9EMCKW"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
+    <style>
+         body {
+            margin: 0; /* Remove default body margin */
+            overflow: hidden; /* Hide scrollbar during loading if needed */
+        }
+
+        #loading-screen {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Define the animation for the dots */
+        @keyframes waterFlow {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Apply the animation to each dot with a delay */
+        #loading-screen .dots1 {
+            display: inline-block;
+            animation: waterFlow 1.5s ease-in-out infinite;
+            animation-delay: 200ms; /* Adjust the delays as needed */
+        }
+        #loading-screen .dots2 {
+            display: inline-block;
+            animation: waterFlow 1.5s ease-in-out infinite;
+            animation-delay: 400ms; /* Adjust the delays as needed */
+        }
+        #loading-screen .dots3 {
+            display: inline-block;
+            animation: waterFlow 1.5s ease-in-out infinite;
+            animation-delay: 600ms; /* Adjust the delays as needed */
+        }
+    </style>
+</head>
+<body>
+<!-- Loading screen -->
+<!-- Loading screen -->
+<div id="loading-screen">
+    <p>Loading<span class="dots1">.</span><span class="dots2">.</span><span class="dots3">.</span></p>
+    <!-- You can customize the loading screen as needed -->
+</div>
+
+<script>
+    window.addEventListener('load', function(ev) {
+      // Show loading screen
+      document.getElementById('loading-screen').style.display = 'block';
+
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            // Hide loading screen once initialization is complete
+            document.getElementById('loading-screen').style.display = 'none';
+
+            // Run the Flutter app
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--  &lt;!&ndash;-->
+<!--If you are serving your web app in a path other than the root, change the-->
+<!--href value below to reflect the base path you are serving from.-->
+
+<!--The path provided below has to start and end with a slash "/" in order for-->
+<!--it to work correctly.-->
+
+<!--For more details:-->
+<!--* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base-->
+
+<!--This is a placeholder for base href that will be replaced by the value of-->
+<!--the `&#45;&#45;base-href` argument provided to `flutter build`.-->
+<!--&ndash;&gt;-->
+<!--  <base href="/">-->
+
+<!--  <meta charset="UTF-8">-->
+<!--  <meta content="IE=Edge" http-equiv="X-UA-Compatible">-->
+<!--  <meta name="description" content="A new Flutter project.">-->
+
+<!--  &lt;!&ndash; iOS meta tags & icons &ndash;&gt;-->
+<!--  <meta name="apple-mobile-web-app-capable" content="yes">-->
+<!--  <meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+<!--  <meta name="apple-mobile-web-app-title" content="testing_app">-->
+<!--  <link rel="apple-touch-icon" href="icons/Icon-192.png">-->
+
+<!--  &lt;!&ndash; Favicon &ndash;&gt;-->
+<!--  <link rel="icon" type="image/png" href="favicon.png"/>-->
+
+<!--  <title>testing_app</title>-->
+<!--  <link rel="manifest" href="manifest.json">-->
+
+<!--  <script>-->
+<!--            // The value below is injected by flutter build, do not touch.-->
+<!--            var serviceWorkerVersion = null;-->
+<!--        </script>-->
+<!--  &lt;!&ndash; This script adds the flutter initialization JS code &ndash;&gt;-->
+<!--  <script src="flutter.js" defer></script>-->
+<!--  <style>-->
+<!--            .container {-->
+<!--                margin: 0;-->
+<!--                position: absolute;-->
+<!--                width: 100vw;-->
+<!--                height: 100vh;-->
+<!--                display: flex;-->
+<!--                justify-content: center;-->
+<!--                align-items: center;-->
+<!--            }-->
+<!--            .loader {-->
+<!--                height: 30vh;-->
+<!--            }-->
+<!--        </style>-->
+<!--</head>-->
+
+<!--<body style="overflow: hidden">-->
+<!--<div class="container">-->
+<!--  <img class="loader" src="assets/loading.gif" />-->
+<!--</div>-->
+<!--<script>-->
+<!--            window.addEventListener('load', function (ev) {-->
+<!--                // Download main.dart.js-->
+<!--                _flutter.loader.loadEntrypoint({-->
+<!--                    serviceWorker: {-->
+<!--                        serviceWorkerVersion: serviceWorkerVersion,-->
+<!--                    },-->
+<!--                    onEntrypointLoaded: function (engineInitializer) {-->
+<!--                        engineInitializer-->
+<!--                            .initializeEngine()-->
+<!--                            .then(function (appRunner) {-->
+<!--                                appRunner.runApp();-->
+<!--                            });-->
+<!--                    },-->
+<!--                });-->
+<!--            });-->
+<!--        </script>-->
+<!--<script>-->
+<!--            window.addEventListener('flutter-first-frame', function () {-->
+<!--                var el = document.getElementsByClassName('container')[0];-->
+<!--                el.remove();-->
+<!--            });-->
+<!--        </script>-->
+<!--</body>-->
+<!--</html>-->

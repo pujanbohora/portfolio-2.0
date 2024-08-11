@@ -15,7 +15,7 @@ abstract class AppConstants {
       service: 'WEB DEVELOPMENT',
       logo: AppAssets.uiDesignLogo,
       description:
-          'I am a Junior react developer. I have experience using JS and TypeScript.',
+          'I am a Junior react developer. I have experience using React and JS.',
     ),
     // CustomService(
     //   service: 'WEB SCRAPING',
